@@ -33,12 +33,21 @@ function handleNumClick(){
 		return;
 	}
 	view.textContent += this.textContent;	
-	clear.textContent = 'C';
+	if(clear.textContent != 'C'){
+		clear.textContent = 'C';
+	}
 }
 
 function handleOperationClick(){
+	if (view.textContent.slice(-1) == ' ') {
+		view.textContent = view.textContent.slice(0,-3);
+		view.textContent += ` ${this.textContent} `;
+		return;	
+	}
 	view.textContent += ` ${this.textContent} `;
-	clear.textContent = 'C';
+	if(clear.textContent != 'C'){
+		clear.textContent = 'C';
+	}
 }
 
 function handleClearClick(){
@@ -48,6 +57,9 @@ function handleClearClick(){
 	}
 	if (view.textContent.length == 1) {
 		view.textContent = 0;
+		return;
+	} else if (view.textContent.slice(-1) == ' ') {
+		view.textContent = view.textContent.slice(0,-3);	
 		return;
 	}
 	view.textContent = view.textContent.slice(0,-1);
