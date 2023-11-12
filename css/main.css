@@ -8,26 +8,14 @@
 }
 
 body {
- display: flex;
- flex-direction: column;
- gap: 4vh;
  background: var(--main-bg-color);
  color: var(--main-text-color);
  font-family: 'Fira Code';
+ padding: 1vh;
 }
 
 header {
- display: flex;
- flex-wrap: wrap;
- justify-content: space-around;
- align-items: center;
-}
-
-h1 {
- padding: 3vmin;
- background: var(--button-bg-color);;
- border: solid var(--main-text-color);
- border-radius: 20px;
+  padding: 4vh;
 }
 
 h3 {
@@ -42,10 +30,8 @@ main {
 .calculator {
  display: flex;
  flex-direction: column;
- align-content: center;
  gap: 4vmin;
- color: #262626;
- background: #d6d6d6;
+ background: var(--main-text-color);
  border-radius: 20px;
  padding: 4vmin;
 }
@@ -58,7 +44,7 @@ main {
  border-radius: 20px;
  color: var(--main-text-color);;
  text-align: right;
- padding: 5%;
+ padding: 6%;
  box-sizing: border-box;
  font-size: x-large;
  margin-top: 2vmin;
