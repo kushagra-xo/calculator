@@ -1,5 +1,4 @@
 // DOM Elements
-
 let view = document.getElementById('view');
 let equal = document.getElementById('equal');
 let clear = document.getElementById('clear');
@@ -25,6 +24,7 @@ function operate(fullOperation){
 	} else if (operator == '/') {
 		view.textContent = firstOperand / secondOperand;	
 	}
+	clear.textContent = 'X';
 }
 
 function handleNumClick(){
@@ -40,6 +40,10 @@ function handleOperationClick(){
 }
 
 function handleClearClick(){
+	if (clear.textContent == 'X') {
+		view.textContent = 0;	
+		clear.textContent = 'C';
+	}
 	if (view.textContent.length == 1) {
 		view.textContent = 0;
 		return;
@@ -48,6 +52,10 @@ function handleClearClick(){
 }
 
 // Event Listeners
+equal.addEventListener('click', () => operate(view.textContent));
+
+clear.addEventListener('click', handleClearClick);
+
 numbers.forEach( number => {
 	number.addEventListener('click', handleNumClick);
 })
@@ -55,6 +63,3 @@ numbers.forEach( number => {
 operations.forEach( operation => {
 	operation.addEventListener('click', handleOperationClick);
 })
-
-equal.addEventListener('click', () => operate(view.textContent));
-clear.addEventListener('click', handleClearClick) 
