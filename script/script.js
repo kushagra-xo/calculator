@@ -5,17 +5,14 @@ let numbers = document.querySelectorAll('.num');
 let operations = document.querySelectorAll('.operator');
 
 // Defaults
-let firstOperand = 0
-let secondOperand = 0
-let operator = ''
 view.textContent = 0;
 
 // Event Handlers
 function operate(fullOperation){
 	operationArray = fullOperation.split(' ', 3);
-	firstOperand = Number(operationArray[0]);
-	operator = operationArray[1];
-	secondOperand = Number(operationArray[2]);
+	let firstOperand = Number(operationArray[0]);
+	let operator = operationArray[1];
+	let secondOperand = Number(operationArray[2]);
 
 	if (operator == '+') {
 		view.textContent = firstOperand + secondOperand;	
@@ -27,6 +24,7 @@ function operate(fullOperation){
 		view.textContent = firstOperand / secondOperand;	
 	}
 }
+
 function handleNumClick(){
 	if (view.textContent == 0) {
 		view.textContent = this.textContent	
