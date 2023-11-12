@@ -9,7 +9,8 @@
 body {
  display: flex;
  flex-direction: column;
- gap: 5vh;
+ gap: 4vh;
+ padding: 1vw;
  background: var(--main-bg-color);
  color: var(--main-text-color);
  font-family: 'Fira Code';
@@ -24,12 +25,13 @@ header {
 
 h1 {
  padding: 3vmin;
- background: #141414;
+ background: var(--button-bg-color);;
+ border: solid var(--main-text-color);
  border-radius: 20px;
  font-family: 'Comfortaa';
 }
 
-h2 {
+h3 {
  text-align: center;
 }
 
@@ -50,19 +52,15 @@ main {
 }
 
 #view {
- align-self: center;
  height: 15vh;
  width: 30vw;
- background: black;
+ background: var(--button-bg-color);;
  border-radius: 20px;
- color: white;
+ color: var(--main-text-color);;
  text-align: right;
  padding: 5%;
  box-sizing: border-box;
  font-size: x-large;
- display: flex;
- justify-content: center;
- align-items: center;
 }
 
 #pad {
