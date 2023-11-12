@@ -59,13 +59,10 @@ function handleClearClick(){
 
 // Event Listeners
 equal.addEventListener('click', () => operate(view.textContent));
-
 clear.addEventListener('click', handleClearClick);
-
 numbers.forEach( number => {
 	number.addEventListener('click', handleNumClick);
 })
-
-operationElements.forEach( operation => { // Renamed from 'operations'
+operationElements.forEach( operation => {
 	operation.addEventListener('click', handleOperationClick);
 })
