@@ -86,9 +86,15 @@ main {
  grid-column: span 2;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
  #view {
    width: 50vw;
+ }
+}
+
+@media (max-width: 800px) {
+ #view {
+   width: 60vw;
  }
 }
 
