@@ -1,12 +1,15 @@
 :root {
  --main-bg-color: #262626;
  --main-text-color: #d6d6d6;
+ --button-bg-color: #141414;
+ --button-padding: 25px;
+ --button-margin: 2%;
 }
 
 body {
  display: flex;
  flex-direction: column;
- gap: 6vh;
+ gap: 5vh;
  background: var(--main-bg-color);
  color: var(--main-text-color);
  font-family: 'Fira Code';
@@ -20,9 +23,10 @@ header {
 }
 
 h1 {
- padding: 2vmin;
+ padding: 3vmin;
  background: #141414;
  border-radius: 20px;
+ font-family: 'Comfortaa';
 }
 
 h2 {
@@ -56,6 +60,9 @@ main {
  padding: 5%;
  box-sizing: border-box;
  font-size: x-large;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 
 #pad {
@@ -75,15 +82,32 @@ main {
 }
 
 #numpad *, #operations * {
- color: #d6d6d6;
- padding: 25px;
- background: #141414;
+ color: var(--main-text-color);
+ padding: var(--button-padding);
+ background: var(--button-bg-color);
  border-radius: 20px;
- margin: 2%;
+ margin: var(--button-margin);
+ transition: background 0.3s ease;
+}
+
+#numpad *:hover, #operations *:hover {
+ background: #333333;
+}
+
+#numpad *:active, #operations *:active {
+ background: #444444;
+}
+
+#numpad *:focus, #operations *:focus {
+ outline: 2px solid #d6d6d6;
 }
 
 #equal {
  grid-column: span 2;
+}
+
+#js{
+  color: #f1ffa9;
 }
 
 @media (max-width: 1000px) {
