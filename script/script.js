@@ -3,7 +3,6 @@
 let view = document.getElementById('view');
 let equal = document.getElementById('equal');
 let clear = document.getElementById('clear');
-let percentage = document.getElementById('percentage')
 let numbers = document.querySelectorAll('.num');
 let operations = document.querySelectorAll('.operator');
 

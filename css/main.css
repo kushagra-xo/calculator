@@ -100,6 +100,10 @@ main {
   color: var(--highlight-color);
 }
 
+#clear{
+  flex-grow: 1
+}
+
 #pointer{
   grid-column: span 2;
 }
