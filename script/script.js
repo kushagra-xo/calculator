@@ -1,8 +1,6 @@
 // DOM Elements
 
 let view = document.getElementById('view')
-let numPad = document.getElementById('numPad');
-let operatorPad = document.getElementById('operatorPad');
 let numbers = document.querySelectorAll('.num');
 let operations = document.querySelectorAll('.operator');
 
