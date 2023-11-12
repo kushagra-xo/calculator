@@ -3,7 +3,7 @@ let view = document.getElementById('view');
 let equal = document.getElementById('equal');
 let clear = document.getElementById('clear');
 let numbers = document.querySelectorAll('.num');
-let operationElements = document.querySelectorAll('.operator'); // Renamed from 'operations'
+let operationElements = document.querySelectorAll('.operator');
 
 // Defaults
 view.textContent = 0;
