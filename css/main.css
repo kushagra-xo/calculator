@@ -1,53 +1,75 @@
-body{
-	padding: 2vw;
-	display: flex;
-	flex-direction: column;
-	gap: 10vh;
-	background: #262626;
-	color: #d6d6d6;
+body {
+ padding: 2vw;
+ display: flex;
+ flex-direction: column;
+ gap: 10vh;
+ background: #262626;
+ color: #d6d6d6;
+ font-family: 'Fira Code';
 }
 
-main{
-	display: flex;
-	justify-content: center;
+header {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-around;
+ align-items: center;
 }
 
-.calculator{
-	display: flex;
-	flex-flow: column wrap;
-	justify-content: center;
-	gap: 5%;
-	align-items: center;
-	color: #262626;
-	height: 60vh;
-	width: 60vw;
-	background: #d6d6d6;
-	border-radius: 20px;
+h1 {
+ padding: 1%;
+ background: #141414;
+ border-radius: 10px;
 }
 
-header{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: center;
-	font-family: 'Fira Code';
+h2 {
+ text-align: center;
+ text-decoration: underline;
+ text-underline-offset: 10px;
 }
 
-h1{
-	padding: 1%;
-	background: #141414;
-	border-radius: 10px;
+main {
+ display: flex;
+ justify-content: center;
 }
 
-h2{
-	text-align: center;
-	text-decoration: underline;
-	text-underline-offset: 10px;
+.calculator {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ gap: 5%;
+ align-items: center;
+ color: #262626;
+ height: 60vh;
+ width: 30vw;
+ background: #d6d6d6;
+ border-radius: 20px;
 }
 
-#view{
-	height: 20%;
-	width: 90%;
-	background: black;
-	border-radius: 20px;
+#view {
+ height: 20%;
+ width: 90%;
+ background: black;
+ border-radius: 20px;
+}
+
+#pad{
+  display: flex;
+}
+
+#numpad{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+#operations{
+  display: flex;
+  flex-direction: column;
+}
+
+#numpad *, #operations *{
+  color: #d6d6d6;
+  padding: 25px;
+  background: #141414;
+  border-radius: 10px;
+  margin: 5px;
 }
