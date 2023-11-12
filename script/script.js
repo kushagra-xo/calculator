@@ -1,6 +1,9 @@
 // DOM Elements
 
-let view = document.getElementById('view')
+let view = document.getElementById('view');
+let equal = document.getElementById('equal');
+let clear = document.getElementById('clear');
+let percentage = document.getElementById('percentage')
 let numbers = document.querySelectorAll('.num');
 let operations = document.querySelectorAll('.operator');
 
@@ -27,17 +30,22 @@ function operate(fullOperation){
 
 function handleNumClick(){
 	if (view.textContent == 0) {
-		view.textContent = this.textContent	
+		view.textContent = this.textContent;
 		return;
-	} else if (this.textContent == '=') {
-		operate(view.textContent);
-		return;	
 	}
 	view.textContent += this.textContent;	
 }
 
 function handleOperationClick(){
 	view.textContent += ` ${this.textContent} `;
+}
+
+function handleClearClick(){
+	if (view.textContent.length == 1) {
+		view.textContent = 0;
+		return;
+	}
+	view.textContent = view.textContent.slice(0,-1);
 }
 
 // Event Listeners
@@ -48,3 +56,6 @@ numbers.forEach( number => {
 operations.forEach( operation => {
 	operation.addEventListener('click', handleOperationClick);
 })
+
+equal.addEventListener('click', () => operate(view.textContent));
+clear.addEventListener('click', handleClearClick) 

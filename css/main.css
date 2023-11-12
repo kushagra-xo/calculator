@@ -4,7 +4,7 @@
  --button-bg-color: #141414;
  --button-padding: 25px;
  --button-margin: 2%;
-  --highlight-color: #f1ffa9;
+ --highlight-color: #f1ffa9;
 }
 
 body {
@@ -43,14 +43,15 @@ main {
  display: flex;
  flex-direction: column;
  align-content: center;
- gap: 5vmin;
+ gap: 4vmin;
  color: #262626;
  background: #d6d6d6;
  border-radius: 20px;
- padding: 4vh;
+ padding: 4vmin;
 }
 
 #view {
+ align-self: center;
  height: 15vh;
  width: 30vw;
  background: var(--button-bg-color);;
@@ -60,6 +61,7 @@ main {
  padding: 5%;
  box-sizing: border-box;
  font-size: x-large;
+ margin-top: 2vmin;
 }
 
 #pad {
@@ -78,7 +80,13 @@ main {
  flex-grow: 1;
 }
 
-#numPad *, #operatorPad * {
+#miscPad {
+ display: flex;
+ flex-direction: column;
+ flex-grow: 1;
+}
+
+#numPad *, #operatorPad *, #miscPad * {
  color: var(--main-text-color);
  padding: var(--button-padding);
  background: var(--button-bg-color);
@@ -87,15 +95,24 @@ main {
  transition: background 0.3s ease;
 }
 
-#numPad *:hover, #operatorPad *:hover {
+#equal{
+  flex-grow: 1;
+  color: var(--highlight-color);
+}
+
+#pointer{
+  grid-column: span 2;
+}
+
+#numPad *:hover, #operatorPad *:hover, #miscPad *:hover{
  background: #333333;
 }
 
-#numPad *:active, #operatorPad *:active {
+#numPad *:hover, #operatorPad *:hover, #miscPad *:hover{
  background: #444444;
 }
 
-#numPad *:focus, #operatorPad *:focus {
+#numPad *:hover, #operatorPad *:hover, #miscPad *:hover{
  outline: 2px solid #d6d6d6;
 }
 
@@ -117,6 +134,6 @@ main {
 
 @media (max-width: 600px) {
  #view {
-   width: 70vw;
+   width: 80vw;
  }
 }
