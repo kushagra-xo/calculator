@@ -4,6 +4,7 @@
  --button-bg-color: #141414;
  --button-padding: 25px;
  --button-margin: 2%;
+  --highlight-color: #f1ffa9;
 }
 
 body {
@@ -27,7 +28,6 @@ h1 {
  background: var(--button-bg-color);;
  border: solid var(--main-text-color);
  border-radius: 20px;
- font-family: 'Comfortaa';
 }
 
 h3 {
@@ -99,12 +99,8 @@ main {
  outline: 2px solid #d6d6d6;
 }
 
-#equal {
- grid-column: span 2;
-}
-
 #js{
-  color: #f1ffa9;
+  color: var(--highlight-color);
 }
 
 @media (max-width: 1000px) {
