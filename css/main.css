@@ -1,10 +1,14 @@
+:root {
+ --main-bg-color: #262626;
+ --main-text-color: #d6d6d6;
+}
+
 body {
- padding: 1vw;
  display: flex;
  flex-direction: column;
- gap: 10vh;
- background: #262626;
- color: #d6d6d6;
+ gap: 6vh;
+ background: var(--main-bg-color);
+ color: var(--main-text-color);
  font-family: 'Fira Code';
 }
 
@@ -16,15 +20,13 @@ header {
 }
 
 h1 {
- padding: 1%;
+ padding: 2vmin;
  background: #141414;
- border-radius: 10px;
+ border-radius: 20px;
 }
 
 h2 {
  text-align: center;
- text-decoration: underline;
- text-underline-offset: 10px;
 }
 
 main {
@@ -35,7 +37,8 @@ main {
 .calculator {
  display: flex;
  flex-direction: column;
- gap: 5%;
+ align-content: center;
+ gap: 5vmin;
  color: #262626;
  background: #d6d6d6;
  border-radius: 20px;
@@ -43,39 +46,54 @@ main {
 }
 
 #view {
- height: 20vh;
  align-self: center;
- width: 40vw;
+ height: 15vh;
+ width: 30vw;
  background: black;
  border-radius: 20px;
- margin-bottom: 20px;
+ color: white;
+ text-align: right;
+ padding: 5%;
+ box-sizing: border-box;
+ font-size: x-large;
 }
 
-#pad{
-  display: flex;
+#pad {
+ display: flex;
 }
 
-#numpad{
-  display: grid;
-  grid-template-columns: auto auto auto;
-  flex-grow: 1;
+#numpad {
+ display: grid;
+ grid-template-columns: auto auto auto;
+ flex-grow: 1;
 }
 
-#operations{
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+#operations {
+ display: flex;
+ flex-direction: column;
+ flex-grow: 1;
 }
 
-#numpad *, #operations *{
-  color: #d6d6d6;
-  padding: 25px;
-  background: #141414;
-  border-radius: 20px;
-  margin: 5px;
-  text-align: center;
+#numpad *, #operations * {
+ color: #d6d6d6;
+ padding: 25px;
+ background: #141414;
+ border-radius: 20px;
+ margin: 2%;
 }
 
-#equal{
-  grid-column: span 2;
+#equal {
+ grid-column: span 2;
+}
+
+@media (max-width: 800px) {
+ #view {
+   width: 50vw;
+ }
+}
+
+@media (max-width: 600px) {
+ #view {
+   width: 70vw;
+ }
 }
