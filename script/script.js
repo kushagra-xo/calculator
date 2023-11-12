@@ -33,10 +33,12 @@ function handleNumClick(){
 		return;
 	}
 	view.textContent += this.textContent;	
+	clear.textContent = 'C';
 }
 
 function handleOperationClick(){
 	view.textContent += ` ${this.textContent} `;
+	clear.textContent = 'C';
 }
 
 function handleClearClick(){
