@@ -10,7 +10,6 @@ body {
  display: flex;
  flex-direction: column;
  gap: 4vh;
- padding: 1vw;
  background: var(--main-bg-color);
  color: var(--main-text-color);
  font-family: 'Fira Code';
@@ -67,19 +66,19 @@ main {
  display: flex;
 }
 
-#numpad {
+#numPad {
  display: grid;
  grid-template-columns: auto auto auto;
  flex-grow: 1;
 }
 
-#operations {
+#operatorPad {
  display: flex;
  flex-direction: column;
  flex-grow: 1;
 }
 
-#numpad *, #operations * {
+#numPad *, #operatorPad * {
  color: var(--main-text-color);
  padding: var(--button-padding);
  background: var(--button-bg-color);
@@ -88,15 +87,15 @@ main {
  transition: background 0.3s ease;
 }
 
-#numpad *:hover, #operations *:hover {
+#numPad *:hover, #operatorPad *:hover {
  background: #333333;
 }
 
-#numpad *:active, #operations *:active {
+#numPad *:active, #operatorPad *:active {
  background: #444444;
 }
 
-#numpad *:focus, #operations *:focus {
+#numPad *:focus, #operatorPad *:focus {
  outline: 2px solid #d6d6d6;
 }
 
