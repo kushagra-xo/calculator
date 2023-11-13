@@ -18,7 +18,13 @@ const operations = {
 
 // Event Handlers
 function operate(fullOperation){
-	const [firstOperand, operator, secondOperand] = fullOperation.split(' ', 3);
+	let [firstOperand, operator, secondOperand] = fullOperation.split(' ', 3);
+	if (firstOperand.endsWith('%')) {
+    firstOperand = Number(firstOperand.slice(0, -1)) / 100;
+  }
+  if (secondOperand.endsWith('%')) {
+    secondOperand = Number(secondOperand.slice(0, -1)) / 100;
+  }
 	view.textContent = operations[operator](Number(firstOperand), Number(secondOperand));
 	if (view.textContent != 0) {
 		clear.textContent = 'X';
@@ -26,11 +32,15 @@ function operate(fullOperation){
 }
 
 function handleNumClick(){
-	if (view.textContent == 0) {
+	// default is view is 0
+	if (view.textContent.slice(-1) == '%') {
+		return;	
+	} else if (view.textContent == 0) { 
 		view.textContent = this.textContent;
 	} else {
 		view.textContent += this.textContent;	
 	}
+
 	clear.textContent = 'C';
 }
 

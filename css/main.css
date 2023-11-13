@@ -87,10 +87,6 @@ main {
   flex-grow: 1
 }
 
-#pointer{
-  grid-column: span 2;
-}
-
 #numPad *:hover, #operatorPad *:hover, #miscPad *:hover{
  background: #333333;
 }
