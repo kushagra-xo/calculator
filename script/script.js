@@ -32,7 +32,6 @@ function operate(fullOperation){
 }
 
 function handleNumClick(){
-	// default is view is 0
 	if (view.textContent.slice(-1) == '%') {
 		return;	
 	} else if (view.textContent == 0) { 
@@ -40,7 +39,6 @@ function handleNumClick(){
 	} else {
 		view.textContent += this.textContent;	
 	}
-
 	clear.textContent = 'C';
 }
 
