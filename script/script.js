@@ -32,7 +32,7 @@ function operate(fullOperation){
 }
 
 function handleNumClick(){
-	if (view.textContent.slice(-1) == '%') {
+	if (view.textContent.endsWith('%')) {
 		return;	
 	} else if (view.textContent == 0) { 
 		view.textContent = this.textContent;
@@ -43,7 +43,7 @@ function handleNumClick(){
 }
 
 function handleOperationClick(){
-	if (view.textContent.slice(-1) == ' ') {
+	if (view.textContent.endsWith(' ')) {
 		view.textContent = view.textContent.slice(0,-3);
 	} else if (view.textContent.includes(' ')) {
 		return;	
@@ -58,7 +58,7 @@ function handleClearClick(){
 		clear.textContent = 'C';
 	} else if (view.textContent.length == 1) {
 		view.textContent = 0;
-	} else if (view.textContent.slice(-1) == ' ') {
+	} else if (view.textContent.endsWith(' ')) {
 		view.textContent = view.textContent.slice(0,-3);	
 	} else {
 		view.textContent = view.textContent.slice(0,-1);
