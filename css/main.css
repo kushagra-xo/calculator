@@ -1,127 +1,138 @@
 :root {
- --main-bg-color: #262626;
- --main-text-color: #d6d6d6;
- --button-bg-color: #141414;
- --button-padding: 25px;
- --button-margin: 2%;
- --highlight-color: #f1ffa9;
+  --main-bg-color: #262626;
+  --main-text-color: #d6d6d6;
+  --button-bg-color: #141414;
+  --button-padding: 25px;
+  --button-margin: 2%;
+  --highlight-color: #f1ffa9;
 }
 
 body {
- display: flex;
- flex-flow: column;
- gap: 4vmin;
- background: var(--main-bg-color);
- color: var(--main-text-color);
- font-family: 'Fira Code';
+  display: flex;
+  flex-flow: column;
+  gap: 4vmin;
+  background: var(--main-bg-color);
+  color: var(--main-text-color);
+  font-family: 'Fira Code';
 }
 
 h3 {
- text-align: center;
+  text-align: center;
 }
 
 main {
- display: flex;
- justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .calculator {
- display: flex;
- flex-direction: column;
- gap: 4vmin;
- background: var(--main-text-color);
- border-radius: 20px;
- padding: 3vmin;
+  display: flex;
+  flex-direction: column;
+  gap: 4vmin;
+  background: var(--main-text-color);
+  border-radius: 20px;
+  box-shadow: 15px 25px 20px 10px rgba(0, 0, 0, 0.25);
+  padding: 3vmin;
 }
 
 #view {
- align-self: center;
- height: 14vh;
- width: 32vw;
- background: var(--button-bg-color);;
- border-radius: 20px;
- color: var(--main-text-color);;
- text-align: right;
- padding: 5%;
- box-sizing: border-box;
- font-size: x-large;
+  align-self: center;
+  height: 14vh;
+  width: 32vw;
+  background: var(--button-bg-color);
+  ;
+  border-radius: 20px;
+  color: var(--main-text-color);
+  ;
+  text-align: right;
+  padding: 5%;
+  box-sizing: border-box;
+  font-size: x-large;
 }
 
 #pad {
- display: flex;
+  display: flex;
 }
 
 #numPad {
- display: grid;
- grid-template-columns: auto auto auto;
- flex-grow: 1;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  flex-grow: 1;
 }
 
 #operatorPad {
- display: flex;
- flex-direction: column;
- flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 #miscPad {
- display: flex;
- flex-direction: column;
- flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-#numPad *, #operatorPad *, #miscPad * {
- color: var(--main-text-color);
- padding: var(--button-padding);
- background: var(--button-bg-color);
- border-radius: 20px;
- margin: var(--button-margin);
- transition: background 0.3s ease;
+#numPad *,
+#operatorPad *,
+#miscPad * {
+  color: var(--main-text-color);
+  padding: var(--button-padding);
+  background: var(--button-bg-color);
+  border-radius: 20px;
+  margin: var(--button-margin);
+  transition: background 0.3s ease;
 }
 
-#equal{
+#equal {
   flex-grow: 1;
   color: var(--highlight-color);
 }
 
-#clear{
+#clear {
   flex-grow: 1
 }
 
-#numPad *:hover, #operatorPad *:hover, #miscPad *:hover{
- background: #333333;
+#numPad *:hover,
+#operatorPad *:hover,
+#miscPad *:hover {
+  background: #333333;
 }
 
-#numPad *:hover, #operatorPad *:hover, #miscPad *:hover{
- background: #444444;
+#numPad *:hover,
+#operatorPad *:hover,
+#miscPad *:hover {
+  background: #444444;
 }
 
-#numPad *:hover, #operatorPad *:hover, #miscPad *:hover{
- outline: 2px solid #d6d6d6;
+#numPad *:hover,
+#operatorPad *:hover,
+#miscPad *:hover {
+  outline: 2px solid #d6d6d6;
 }
 
-#js{
+#js {
   color: var(--highlight-color);
 }
 
-footer{
+footer {
   text-align: center;
   font-size: small;
 }
 
 @media (max-width: 1000px) {
- #view {
-   width: 50vw;
- }
+  #view {
+    width: 50vw;
+  }
 }
 
 @media (max-width: 800px) {
- #view {
-   width: 60vw;
- }
+  #view {
+    width: 60vw;
+  }
 }
 
 @media (max-width: 600px) {
- #view {
-   width: 80vw;
- }
+  #view {
+    width: 80vw;
+  }
 }
